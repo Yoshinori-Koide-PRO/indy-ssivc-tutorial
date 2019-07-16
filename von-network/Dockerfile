@@ -3,9 +3,9 @@ FROM ubuntu:16.04
 ARG uid=1000
 ARG indy_stream=master
 
-ARG indy_plenum_ver=1.2.237
+ARG indy_plenum_ver=1.2.242
 ARG indy_anoncreds_ver=1.0.32
-ARG indy_node_ver=1.2.297
+ARG indy_node_ver=1.2.301
 ARG python3_indy_crypto_ver=0.2.0
 ARG indy_crypto_ver=0.2.0
 
@@ -54,9 +54,7 @@ USER indy
 WORKDIR /home/indy
 
 # Install rust toolchain
-RUN curl -o rustup https://sh.rustup.rs
-RUN chmod +x rustup
-RUN ./rustup -y
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain 1.26.0
 
 # Build libindy
 RUN git clone https://github.com/hyperledger/indy-sdk.git

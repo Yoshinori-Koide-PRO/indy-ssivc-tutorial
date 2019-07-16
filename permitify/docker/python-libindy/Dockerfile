@@ -22,9 +22,9 @@ RUN ln -sf /usr/bin/pip3 /usr/bin/pip
 RUN pip install virtualenv
 RUN virtualenv $HOME
 
-ARG indy_plenum_ver=1.2.237
+ARG indy_plenum_ver=1.2.242
 ARG indy_anoncreds_ver=1.0.32
-ARG indy_node_ver=1.2.297
+ARG indy_node_ver=1.2.301
 ARG python3_indy_crypto_ver=0.2.0
 ARG indy_crypto_ver=0.2.0
 

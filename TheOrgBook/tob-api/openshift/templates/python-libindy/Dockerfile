@@ -8,6 +8,7 @@ apt-get install -y \
     python3-pip \
     python-setuptools \
     python3-nacl \
+    libpq-dev \
     apt-transport-https \
     ca-certificates
 

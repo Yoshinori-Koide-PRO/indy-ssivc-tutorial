@@ -16,9 +16,7 @@ ENV HOME=/opt/app-root/src
 WORKDIR $HOME
 
 # Install rust toolchain
-RUN curl -o rustup https://sh.rustup.rs
-RUN chmod +x rustup
-RUN ./rustup -y
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain 1.26.0
 
 # Build libindy
 RUN git clone https://github.com/hyperledger/indy-sdk.git
