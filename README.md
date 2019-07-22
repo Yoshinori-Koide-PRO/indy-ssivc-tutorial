@@ -156,7 +156,7 @@ To start Permitify, open a new terminal and enter the commands:
 
 ```
 $ cd permitify/docker
-$ ./manage start all
+$ ./manage start all APPLICATION_URL=http://192.168.1.10 THE_ORG_BOOK_APP_URL=http://192.168.1.10:8080
 ```
 
 Once all containers are started, you can view the node pool and ledger by visiting the following web page in your browser:
